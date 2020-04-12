@@ -16,11 +16,18 @@ function createEmployeeRecords(arrayOfArrays){
 }
 
 function createTimeInEvent(employee, dateStamp) {
-  const [date, hour] = dateStamp.split(' ')
-  employee.timeInEvents.push({
-    type: 'TimeIn',
-    hour: parseInt(hour, 10),
-    date: date
-  })
-  return employee
+
+}
+
+
+function timeStamp(type) {
+  return function(employee, dateStamp){
+    const [date, hour] = dateStamp.split(' ')
+    employee.timeInEvents.push({
+      type: type,
+      hour: parseInt(hour, 10),
+      date: date
+    })
+    return employee
+  }
 }

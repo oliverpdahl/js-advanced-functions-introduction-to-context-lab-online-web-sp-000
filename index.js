@@ -15,7 +15,7 @@ function createEmployeeRecords(arrayOfArrays){
   return arrayOfArrays.map(array => createEmployeeRecord(array))
 }
 
-const createTimeInEvent(employee, dateStamp) = timeStamp("TimeIn")
+const createTimeInEvent = timeStamp("TimeIn", employee, dateStamp)
 
 function timeStamp(type) {
   return function(employee, dateStamp){

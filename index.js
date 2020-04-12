@@ -23,4 +23,5 @@ function createTimeInEvent(employee, dateStamp) {
     hour: hour,
     date: date
   }
+  return employee
 }

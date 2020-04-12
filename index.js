@@ -10,3 +10,7 @@ function createEmployeeRecord(recordArray) { //first name, family name, title, a
     timeOutEvents: []
   }
 }
+
+function createEmployeeRecords(arrayOfArrays){
+  return arrayOfArrays.map(array => createEmployeeRecord(array))
+}

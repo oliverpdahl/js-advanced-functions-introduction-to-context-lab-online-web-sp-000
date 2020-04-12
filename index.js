@@ -14,3 +14,13 @@ function createEmployeeRecord(recordArray) { //first name, family name, title, a
 function createEmployeeRecords(arrayOfArrays){
   return arrayOfArrays.map(array => createEmployeeRecord(array))
 }
+
+function createTimeInEvent(employee, dateStamp) {
+  const [date, time] = dateStamp.split(' ')
+  const hour = time.slice(0, 2)
+  employee.timeInEvents: {
+    type: 'TimeIn',
+    hour: hour,
+    date: date
+  }
+}

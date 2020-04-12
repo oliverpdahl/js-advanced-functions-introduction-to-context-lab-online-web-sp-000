@@ -16,8 +16,7 @@ function createEmployeeRecords(arrayOfArrays){
 }
 
 function createTimeInEvent(employee, dateStamp) {
-  const [date, time] = dateStamp.split(' ')
-  const hour = time.slice(2)
+  const [date, hour] = dateStamp.split(' ')
   employee.timeInEvents.push({
     type: 'TimeIn',
     hour: hour,

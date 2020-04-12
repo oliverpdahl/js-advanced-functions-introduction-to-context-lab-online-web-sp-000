@@ -19,7 +19,7 @@ function createTimeInEvent(employee, dateStamp) {
   const [date, hour] = dateStamp.split(' ')
   employee.timeInEvents.push({
     type: 'TimeIn',
-    hour: hour,
+    hour: parseInt(hour, 10),
     date: date
   })
   return employee
